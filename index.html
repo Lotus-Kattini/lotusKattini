@@ -28,6 +28,8 @@
    })();
 </script>
 
+
+
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	
@@ -630,28 +632,29 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Your Name">
+									<input type="text" class="form-control" placeholder="Your Name" name="name"
+									id="name" required>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Your Email">
+									<input type="text" class="form-control" placeholder="Your Email" name="email" id="email" required>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Subject">
+									<input type="text" class="form-control" placeholder="Subject" >
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+									<textarea name="message" id="message" required cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
 									<!-- <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5"> -->
-									<button class="btn btn-primary py-3 px-5" onclick="SendEmail()">Send Message</button>
+									<button type="button" class="btn btn-primary py-3 px-5" onclick="SendEmail()">Send Message</button>
 								</div>
 							</div>
 						</div>
@@ -666,7 +669,31 @@
 								<span class="fa fa-map-marker"></span>
 							</div>
 							<div class="text">
-								<p><span>Address:</span>Damascus/Syria</p>
+								<p><span>Whatsapp:</span></p>
+								<article class="contact__option">
+									<a
+									href="https://api.whatsapp.com/send?phone=+963938871065"
+									target="_blank"
+									class="contbtns"
+									>send a message</a
+									>
+								</article>
+							</div>
+						</div>
+						<div class="dbox w-100 d-flex">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="fa fa-map-marker"></span>
+							</div>
+							<div class="text">
+								<p><span>Messenger:</span></p>
+								<article class="contact__option">
+									<a
+									href="https://m.me/lotus.kattini.5"
+									target="_blank"
+									class="contbtns"
+									>send a message</a
+									>
+								</article>
 							</div>
 						</div>
 						<div class="dbox w-100 d-flex">
@@ -682,7 +709,7 @@
 								<span class="fa fa-paper-plane"></span>
 							</div>
 							<div class="text">
-								<p><span>Email:</span> <a href="mailto:info@yoursite.com">lotuskh329@gmail.com</a></p>
+								<p><span>Email:</span> <a href="mailto:lotuskh329@gmail.com">lotuskh329@gmail.com</a></p>
 							</div>
 						</div>
 						<div class="dbox w-100 d-flex">
@@ -718,6 +745,7 @@
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
+
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
 		<script src="js/popper.min.js"></script>
@@ -732,7 +760,9 @@
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 		<script src="js/google-map.js"></script>
 		
+		<script src="sweetalert2.all.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="js/main.js"></script>
-		
+
 	</body>
 	</html>

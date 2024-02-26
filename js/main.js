@@ -1,4 +1,6 @@
- (function($) {
+
+
+(function($) {
 
 	"use strict";
 
@@ -328,19 +330,36 @@ var typed = new Typed('.autoType',{
 
 
   function SendEmail(){
+
 	var params={
 	  name:document.getElementById('name').value,
 	  email:document.getElementById('email').value,
 	  message:document.getElementById('message').value,
 	}
   
-	emailjs.send('service_otaxrkh','template_bfxxt8b',params).then(
-	  (res)=>{
-		console.log(res)
-		document.getElementById('name').value='';
-		document.getElementById('email').value='';
-		document.getElementById('message').value='';
-		alert('Your Message Sent Sucsesfully!'+ res.status)
-	  }
-	)
+	if(document.getElementById('name').value!=='' || document.getElementById('email').value!=='' ||document.getElementById('message').value!==''){
+
+		emailjs.send('service_otaxrkh','template_bfxxt8b',params).then(
+		  (res)=>{
+			console.log(res)
+			document.getElementById('name').value='';
+			document.getElementById('email').value='';
+			document.getElementById('message').value='';
+			// alert('Your Message Sent Sucsesfully!'+ res.status)
+			Swal.fire({
+				icon: "success",
+				title: "Success",
+				text: "Your Message Sent Sucsesfully!",
+			  });
+		  }
+		)
+	}
+	else{
+		// alert('Fill the form field first!')
+		Swal.fire({
+			icon: "error",
+			title: "Oops...",
+			text: "Fill the form field first!",
+		  });
+	}
   }
